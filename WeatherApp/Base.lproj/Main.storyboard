@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-6.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pp3-dx-roc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Heavy Snow" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUm-bc-x9B">
+                                <rect key="frame" x="76" y="198.5" width="281" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vFJ-zZ-mZH">
+                                <rect key="frame" x="34" y="194" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="03F-dC-Q45"/>
+                                    <constraint firstAttribute="width" constant="33" id="oY0-am-uHD"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="JBT-pS-VL8">
+                                <rect key="frame" x="0.0" y="34" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bgJ-ek-t6R"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rYF-aO-G9f"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSi-Qo-XWq">
+                                <rect key="frame" x="34" y="232" width="80" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="R3z-yD-muO"/>
+                                    <constraint firstAttribute="width" constant="80" id="poX-RO-BBQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JBT-pS-VL8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0Qw-Hh-hin"/>
+                            <constraint firstItem="JBT-pS-VL8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="28u-fr-AV4"/>
+                            <constraint firstItem="PSi-Qo-XWq" firstAttribute="leading" secondItem="vFJ-zZ-mZH" secondAttribute="leading" id="29f-Ma-0f5"/>
+                            <constraint firstAttribute="trailing" secondItem="JBT-pS-VL8" secondAttribute="trailing" id="3M2-8y-Cd5"/>
+                            <constraint firstItem="QUm-bc-x9B" firstAttribute="height" secondItem="vFJ-zZ-mZH" secondAttribute="height" id="49B-sD-8I2"/>
+                            <constraint firstItem="QUm-bc-x9B" firstAttribute="leading" secondItem="vFJ-zZ-mZH" secondAttribute="trailing" constant="9" id="A1G-nC-zz2"/>
+                            <constraint firstItem="vFJ-zZ-mZH" firstAttribute="top" secondItem="JBT-pS-VL8" secondAttribute="bottom" constant="116" id="Fai-TQ-Yvy"/>
+                            <constraint firstAttribute="trailing" secondItem="Pp3-dx-roc" secondAttribute="trailing" id="Gho-zU-zbn"/>
+                            <constraint firstItem="PSi-Qo-XWq" firstAttribute="top" secondItem="QUm-bc-x9B" secondAttribute="bottom" constant="0.5" id="Mee-cp-hSs"/>
+                            <constraint firstAttribute="trailing" secondItem="QUm-bc-x9B" secondAttribute="trailing" constant="18" id="Qri-rK-FLa"/>
+                            <constraint firstItem="QUm-bc-x9B" firstAttribute="top" secondItem="vFJ-zZ-mZH" secondAttribute="top" id="X9e-du-35X"/>
+                            <constraint firstItem="Pp3-dx-roc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ezH-JV-Akp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pp3-dx-roc" secondAttribute="bottom" id="iKT-pE-p2N"/>
+                            <constraint firstItem="vFJ-zZ-mZH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="34" id="ojh-bW-dF1"/>
+                            <constraint firstItem="Pp3-dx-roc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pwd-yI-oBA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconImageview" destination="vFJ-zZ-mZH" id="Tf5-Ud-014"/>
+                        <outlet property="tempLabel" destination="PSi-Qo-XWq" id="zjc-Tv-Wyj"/>
+                        <outlet property="weatherLabel" destination="QUm-bc-x9B" id="UUZ-Tx-RL5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74.400000000000006" y="-95.802098950524751"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images-6.png" width="375" height="670"/>
+    </resources>
+</document>
